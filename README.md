@@ -84,7 +84,7 @@ Waveforms are dumped into a `.vcd` file for viewing.
 ### Using Icarus Verilog
 
 ```bash id="sim001"
-iverilog -o dual_port_ram tb_dual_port_ram.v dual_port_ram.v
+iverilog -o dual_port_ram tb_dual_port_ram.sv dual_port_ram.v
 vvp dual_port_ram
 gtkwave dual_port_ram.vcd
 ```
