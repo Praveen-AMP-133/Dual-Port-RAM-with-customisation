@@ -39,21 +39,29 @@ This project is intended for **RTL Design and Design Verification beginners** to
 
 ### Inputs
 
-* `clk_a` : Write clock
-* `addr_a` : Write address
-* `clk_b` : Read clock
-* `addr_b` : Read address
-* `wr_en_a` : Write enable
-* `rd_en_b` : Read enable
-* `din` : Input data
+| Signal  | Width | Description   |
+| ------- | ----- | ------------- |
+| clk_a   | 1     | Write clock   |
+| addr_a  | N     | Write address |
+| clk_b   | 1     | Read clock    |
+| addr_b  | N     | Read address  |
+| wr_en_a | 1     | Write enable  |
+| rd_en_b | 1     | Read enable   |
+| din     | WIDTH | Input data    |
+
+> **Note:** N = log₂(DEPTH), where DEPTH = 2ᴺ
+
+---
 
 ### Outputs
 
-* `dout` : Output data
-* `full` : Indicates memory is full
-* `empty` : Indicates memory is empty
-* `almost_full` : Indicates memory is nearly full
-* `almost_empty` : Indicates memory is nearly empty
+| Signal       | Width | Description          |
+| ------------ | ----- | -------------------- |
+| dout         | WIDTH | Output data          |
+| full         | 1     | Memory full          |
+| empty        | 1     | Memory empty         |
+| almost_full  | 1     | Near full condition  |
+| almost_empty | 1     | Near empty condition |
 
 ---
 
